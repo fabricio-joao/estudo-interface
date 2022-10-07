@@ -12,20 +12,20 @@ public class RendaServicos {
     private Double precoHora;
     private Double precoDia;
 
-    private BrasilTaxas bt;
+    private Taxas tx;
 
-    public RendaServicos(Double precoHora, Double precoDia, BrasilTaxas bt) {
+    public RendaServicos(Double precoHora, Double precoDia, Taxas tx) {
         this.precoHora = precoHora;
         this.precoDia = precoDia;
-        this.bt = bt;
+        this.tx = tx;
     }
 
-    public BrasilTaxas getBt() {
-        return bt;
+    public Taxas getTx() {
+        return tx;
     }
 
-    public void setBt(BrasilTaxas bt) {
-        this.bt = bt;
+    public void setTx(Taxas tx) {
+        this.tx = tx;
     }
 
     public Double getPrecoHora() {
@@ -57,7 +57,7 @@ public class RendaServicos {
             pagamentoBasico = Math.ceil(data/24) * this.getPrecoDia();
         }
 
-        double taxa = bt.taxa(pagamentoBasico);
+        double taxa = tx.taxas(pagamentoBasico);
         ac.setBoleto(new Boleto(pagamentoBasico, taxa));
     }
 }

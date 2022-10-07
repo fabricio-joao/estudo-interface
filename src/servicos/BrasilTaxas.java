@@ -1,8 +1,9 @@
 package servicos;
 
-public  class BrasilTaxas {
+public  class BrasilTaxas implements Taxas{
 
-    public double taxa(double valor) {
+    @Override
+    public double taxas(double valor) {
         if(valor <= 100){
             return valor * 0.2;
         } else {
