@@ -20,14 +20,6 @@ public class RendaServicos {
         this.tx = tx;
     }
 
-    public Taxas getTx() {
-        return tx;
-    }
-
-    public void setTx(Taxas tx) {
-        this.tx = tx;
-    }
-
     public Double getPrecoHora() {
         return precoHora;
     }
